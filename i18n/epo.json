@@ -1,0 +1,20 @@
+{
+    "lv": 189,
+    "title": "InterVorto: Tradukoj de Leksilo",
+    "teradict": "InterVorto",
+    "teradict_description": "Traduku vortojn de Esperanto al centoj da lingvoj!",
+    "word_or_phrase": "Vorto aŭ esprimo:",
+    "translate": "Traduku!",
+    "can_translate": "InterVorto povas traduki tion al:",
+    "tr_not_found": "InterVorto povas traduki tion al neniu lingvo. Provu alian vorton aŭ esprimon:",
+    "ex_not_found": "Tiu vorto esperantlingva mankas al InterVorto. Provu alian vorton aŭ esprimon:",
+    "more_languages": "Por pliaj lingvoj, vidu tradukojn de tradukoj ĉe Leksilo.",
+    "translations": "Tradukoj:",
+    "translate_new": "Traduku novan vorton aŭ esprimon",
+    "malfunction": "Pardonu. La tradukilo misfunkcias.",
+    "valid_xhtml": "Valida XHTML 1,1",
+    "see_all": "Vidu ĉiujn tradukojn de ĝi",
+    "all": "Ĉiuj",
+    "see_translations": "Vidu ĝiajn tradukojn al:",
+    "teradict_translates": "InterVorto tradukas tion al:"
+}

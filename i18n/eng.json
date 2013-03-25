@@ -1,0 +1,20 @@
+{
+    "lv": 187,
+    "title": "TeraDict: Translations from PanLex",
+    "teradict": "TeraDict",
+    "teradict_description": "Translate English words into hundreds of languages!",
+    "word_or_phrase": "Word or phrase:",
+    "translate": "Translate!",
+    "can_translate": "TeraDict can translate this into:",
+    "tr_not_found": "TeraDict cannot translate this English word or phrase. Try another:",
+    "ex_not_found": "TeraDict does not contain this English word or phrase. Try another:",
+    "more_languages": "For more languages, get translations of translations with PanLex.",
+    "translations": "Translations:",
+    "translate_new": "Translate a new word or phrase",
+    "malfunction": "Sorry. The translator has malfunctioned.",
+    "valid_xhtml": "Valid XHTML 1.1",
+    "see_all": "See all of its translations",
+    "all": "All",
+    "see_translations": "See its translations into:",
+    "teradict_translates": "TeraDict translates this into:"
+}

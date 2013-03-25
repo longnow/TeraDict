@@ -1,0 +1,28 @@
+doctype 5
+html
+  head
+    meta(http-equiv='cache-control', content='no-cache; no-store')
+    meta(http-equiv='pragma', content='no-cache')
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=640')
+    meta(name='format-detection', content='telephone=no')
+
+    link(rel='stylesheet', href=urlroot + '/styles.css')
+    script(type='text/javascript')
+      window.onload = function() {
+        if (document.forms.fm0) document.forms.fm0.et0.focus();
+      };
+
+    title= lg.title
+
+    include ga
+    
+  body
+    h1= lg.teradict
+    h3= subheading
+  
+    block content
+    
+    p(style="text-align: center")
+      a(href="http://validator.w3.org/check?uri=referer")
+        img(style="border: 0", src="/demo/valid-xhtml11-blue.png", alt=lg.valid_xhtml, height=31, width=88)

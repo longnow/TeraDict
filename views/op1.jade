@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  table.bp
+    tr: td: h3= et0
+  h3= lg.can_translate
+  
+  form#fm0(action=base + '/2' + qs(), enctype='multipart/form-data', method='post')
+    input(type='hidden', name='ex0', value=ex0)
+    input(type='hidden', name='et0', value=et0)
+    table.bp
+      for lv in result
+       tr
+        th: button.lcvc(type='submit', name='lv1', value=JSON.stringify(lv))= lcvcUid(lv)
+        td= lv.tt
+    p.c
+      a(href="http://if.panlex.org/u?sr=exviz5&uslc='" + lg.lc + "'&uslv=" + lg.lv + "&ex=" + ex0 + "&exn=100000&exnn=1&lv=" + lg.lv + "&sel=lv" + "&ser=tot&tt=" + ex0 + "&ttsel=&trnviz=trtr")= lg.more_languages

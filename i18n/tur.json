@@ -1,0 +1,20 @@
+{
+    "lv": 738,
+    "title": "TümSöz Çeviricisi",
+    "teradict": "TümSöz",
+    "teradict_description": "Burada Türkçe sözleri yüzlerce dile çevirebilirsiniz!",
+    "word_or_phrase": "Söz veya deyim:",
+    "translate": "Çevirelim!",
+    "can_translate": "TümSöz bu sözü şu dillere çevirebilir:",
+    "tr_not_found": "TümSöz bu sözü hiç bir dile çeviremiyor. Yeni söz ya da deyim:",
+    "ex_not_found": "Kusura bakmayınız. Şu Türkçe sözü TümSöz’de yok. Başka bir sözü ya da deyimi deneyiniz:",
+    "more_languages": "Başka dillere çevirmek için, TümSöz ile çevirilerin çevirilerini arayınız.",
+    "translations": "Çeviriler:",
+    "translate_new": "Yeni bir sözü ya da deyimı çeviriniz",
+    "malfunction": "Kusura bakmayınız. Çevirici bozuk.",
+    "valid_xhtml": "Doğru XHTML 1,1",
+    "see_all": "Bütün çevirilerini görünüz",
+    "all": "Hepsi",
+    "see_translations": "Şu dile çevirilerini görünüz:",
+    "teradict_translates": "TümSöz bu sözü şöyle çevirir:"
+}

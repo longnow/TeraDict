@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h3
+    table.bp
+      tr: td: h3= et0
+
+    table.bp
+      tr
+        td= lcvcUid(lv1)
+        td= lv1.tt
+    
+    | #{lg.translations}
+
+  table.bp
+    for ex in result
+      tr: td= ex.tt
+  
+  h4 
+    a(href=base + '/' + qs())= lg.translate_new
