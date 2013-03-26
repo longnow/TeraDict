@@ -121,7 +121,7 @@ function op1(req, res, next) {
     if (data.resultNum === 0) return res.render('index', { subheading: res.lg.ex_not_found});
     
     var ex0 = data.result[0].ex;
-    apiRequest('/lv', { tr: [ex0], sort: ["tt"] }, function (err, data) {
+    apiRequest('/lv', { tr: [ex0], sort: ["lc","vc"] }, function (err, data) {
       if (err) return next(err);
       if (data.resultNum === 0) res.render('index', { subheading: res.lg.tr_not_found });
       else res.render('op1', { result: data.result, ex0: ex0 });
