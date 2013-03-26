@@ -3,9 +3,11 @@ var express = require('express'),
     http = require('http'),
     path = require('path'),
     fs = require('fs'),
-    sprintf = require('sprintf').sprintf,
     qs = require('qs'),
-    request = require('request');
+    sprintf = require('sprintf').sprintf,
+    request = require('request'),
+    XRegExp = require('xregexp').XRegExp,
+    unorm = require('unorm');
 
 var app = express();
 
@@ -114,7 +116,7 @@ function index(req, res, next) {
 
 function op1(req, res, next) {
   if (blank(req.body, ['et0'])) return res.render('index');
-  var et0 = req.body.et0;
+  var et0 = normalize(req.body.et0);
   
   apiRequest('/ex', { lv: [res.lg.lv], tt: [et0] }, function (err, data) {
     if (err) return next(err);
@@ -159,4 +161,11 @@ function blank(obj, params) {
     if (obj[item] === undefined || obj[item] === '') return true;
   });
   return false;
+}
+
+function normalize(txt) {
+  txt = unorm.nfc(txt);
+  txt = txt.replace(XRegExp('\\p{C}+', 'g'), '');
+  txt = txt.replace(XRegExp('\\p{Z}+', 'g'), ' ');
+  return txt.trim();
 }
