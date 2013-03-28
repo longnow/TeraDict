@@ -138,7 +138,7 @@ function op2(req, res, next) {
   var ex0 = Number(req.body.ex0),
       lv1 = res.locals.lv1 = JSON.parse(req.body.lv1);
   
-  panlex.queryAll('/tr', { ex: [ex0], lv: [lv1.lv], sort: ["tt"] }, function (err, data) {
+  panlex.queryAll('/ex', { tr: [ex0], lv: [lv1.lv], sort: ["tt"] }, function (err, data) {
     if (err) return next(err);
     res.render('op2', { result: data.result });
   });
