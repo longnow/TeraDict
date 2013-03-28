@@ -6,7 +6,6 @@ var express = require('express'),
     fs = require('fs'),
     qs = require('qs'),
     sprintf = require('sprintf').sprintf,
-    request = require('request'),
     XRegExp = require('xregexp').XRegExp,
     unorm = require('unorm');
 
