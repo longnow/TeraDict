@@ -1,4 +1,4 @@
 TeraDict
 ========
 
-Translate English words into hundreds of languages!
+Translate words from your language into hundreds of languages!
