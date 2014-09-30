@@ -1,13 +1,16 @@
 var express = require('express'),
-    config = require('./config'),
-    panlex = require('panlex'),
-    http = require('http'),
-    path = require('path'),
-    fs = require('fs'),
-    qs = require('qs'),
-    sprintf = require('sprintf').sprintf,
-    XRegExp = require('xregexp').XRegExp,
-    unorm = require('unorm');
+var config = require('./config'),
+var panlex = require('panlex'),
+var http = require('http'),
+var path = require('path'),
+var fs = require('fs'),
+var qs = require('qs'),
+var sprintf = require('sprintf').sprintf,
+var XRegExp = require('xregexp').XRegExp,
+var unorm = require('unorm');
+
+panlex.limit = false;
+panlex.setUserAgent('TeraDict', require('./package.json').version);
 
 var app = express();
 
