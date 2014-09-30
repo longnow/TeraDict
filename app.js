@@ -1,12 +1,12 @@
-var express = require('express'),
-var config = require('./config'),
-var panlex = require('panlex'),
-var http = require('http'),
-var path = require('path'),
-var fs = require('fs'),
-var qs = require('qs'),
-var sprintf = require('sprintf').sprintf,
-var XRegExp = require('xregexp').XRegExp,
+var express = require('express');
+var config = require('./config');
+var panlex = require('panlex');
+var http = require('http');
+var path = require('path');
+var fs = require('fs');
+var qs = require('qs');
+var sprintf = require('sprintf').sprintf;
+var XRegExp = require('xregexp').XRegExp;
 var unorm = require('unorm');
 
 panlex.limit = false;
