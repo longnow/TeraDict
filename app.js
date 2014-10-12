@@ -1,10 +1,13 @@
 var express = require('express');
+var logger = require('morgan');
+var bodyParser = require('body-parser');
+var errorHandler = require('errorhandler');
+
 var config = require('./config');
 var panlex = require('panlex');
-var http = require('http');
 var path = require('path');
 var fs = require('fs');
-var qs = require('qs');
+var qs = require('querystring');
 var sprintf = require('sprintf').sprintf;
 var XRegExp = require('xregexp').XRegExp;
 var unorm = require('unorm');
@@ -14,33 +17,24 @@ panlex.setUserAgent('TeraDict', require('./package.json').version);
 
 var app = express();
 
-app.configure(function(){
-  app.set('port', config.port || 3000);
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
-  
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(setHeaders);
-  app.use(prepareRequest);
-  app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
-  app.use(errorResponse);
-});
+app.set('port', config.port || 3000);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
 
-app.configure('development', function(){
-  app.use(express.errorHandler());
-});
+if (app.get('env') === 'development') app.use(logger('dev'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(setHeaders);
+app.use(prepareRequest);
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(errorResponse);
 
-app.locals({
-  base: config.base,
-  urlroot: '/demo',
-  lcvcUid: function(obj) {
-    return sprintf('%s-%03d', obj.lc, obj.vc);
-  }
-});
+if (app.get('env') === 'development') app.use(errorHandler());
+
+app.locals.base = config.base;
+app.locals.urlroot = '/demo';
+app.locals.lcvcUid = function(obj) {
+  return sprintf('%s-%03d', obj.lc, obj.vc);
+};
 
 loadLanguages();
 
@@ -48,7 +42,7 @@ app.get('/', index);
 app.post('/1', op1);
 app.post('/2', op2);
 
-http.createServer(app).listen(app.get('port'), function(){
+app.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 

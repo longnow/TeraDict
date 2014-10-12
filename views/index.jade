@@ -1,7 +1,7 @@
 extends layout
 
 block content  
-  form#fm0(action=base + '/1' + qs(), enctype='multipart/form-data', method='post')
+  form#fm0(action=base + '/1' + qs(), method='post')
     table.bp
       tr: td
           p.c= lg.word_or_phrase
