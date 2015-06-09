@@ -120,7 +120,7 @@ function op1(req, res, next) {
     if (data.resultNum === 0) return res.render('index', { subheading: res.lg.ex_not_found});
     
     var ex0 = data.result[0].ex;
-    panlex.queryAll('/lv', { tr: [ex0], sort: ["lc","vc"] }, function (err, data) {
+    panlex.queryAll('/lv', { trex: [ex0], sort: ["lc","vc"] }, function (err, data) {
       if (err) return next(err);
       if (data.resultNum === 0) res.render('index', { subheading: res.lg.tr_not_found });
       else res.render('op1', { result: data.result, ex0: ex0 });
@@ -135,7 +135,7 @@ function op2(req, res, next) {
   var ex0 = Number(req.body.ex0),
       lv1 = res.locals.lv1 = JSON.parse(req.body.lv1);
   
-  panlex.queryAll('/ex', { tr: [ex0], lv: [lv1.lv], sort: ["tt"] }, function (err, data) {
+  panlex.queryAll('/ex', { trex: [ex0], lv: [lv1.lv], sort: ["tt"] }, function (err, data) {
     if (err) return next(err);
     res.render('op2', { result: data.result });
   });
