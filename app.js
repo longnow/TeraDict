@@ -42,7 +42,7 @@ app.get('/', index);
 app.post('/1', op1);
 app.post('/2', op2);
 
-app.listen(app.get('port'), function(){
+app.listen(app.get('port'), '127.0.0.1', function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 
