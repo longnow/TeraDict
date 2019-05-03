@@ -17,7 +17,7 @@ panlex.setUserAgent('TeraDict', require('./package.json').version);
 
 var app = express();
 
-app.set('port', config.port || 3000);
+app.set('port', process.env.PORT || config.port || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
